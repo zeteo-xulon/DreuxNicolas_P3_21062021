@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.scss",
+		"../sass/tools/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import './tools/variables.scss';\r\n\r\n\r\n*{\r\n    box-sizing: border-box;\r\n}\r\nbody{\r\n    background-color: $primary-color;\r\n}",
+		"\r\n\r\n$primary-color: #9356DC;\r\n$secondary-color: #FF79DA;\r\n$tertiary-color: #99E2D0;\r\n$shadow-color: lightgray;"
+	],
+	"names": [],
+	"mappings": ";AAGA,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,UAAU;CACzB;;;AACD,AAAA,IAAI,CAAA;EACA,gBAAgB,ECLJ,OAAO;CDMtB"
+}

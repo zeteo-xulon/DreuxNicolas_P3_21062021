@@ -1,0 +1,10 @@
+@import '../tools/variables';
+@import '../tools/mixins';
+@import '../tools/functions';
+
+header{
+    display: flex;
+    justify-content: center;
+
+    background: black;
+}
