@@ -1,0 +1,51 @@
+
+//@import '../tools/variables';
+//@import '../tools/mixins';
+
+/*==================================== */
+/*             FONCTIONNEMENT              */
+/*==================================== */
+.fonctionnement{
+    padding: 1rem;
+    font-family: $secondary-font-bold;
+    & h2{
+        @include title-size;
+    }
+}
+.function__list{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px;
+    gap: 1rem;
+    & li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        background: $background-color-primary;
+        flex: 1 0 30%;
+        min-width: 300px;
+        gap: 1rem;
+        padding: 1.4rem 1rem;
+        border-radius: 20px;
+        @include box-shadow;
+    }
+    & .function__number{
+        position: relative;
+        right: 30px;
+        background: $primary-color;
+        border-radius: 100%;
+        color: $background-text-color;
+        font-size: 1.1rem;
+        padding: 0.3rem 0.7rem;
+    }
+    & .fas{
+        font-size: 1.2rem;
+        color: gray;
+        &:hover, :active{
+            color: $primary-color;
+        }
+        & .function__text{
+            justify-items: center;
+        }
+    }
+}

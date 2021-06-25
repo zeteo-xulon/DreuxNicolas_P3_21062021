@@ -1,0 +1,33 @@
+//@import '../tools/variables';
+//@import '../tools/mixins';
+
+@font-face {
+    font-family: $primary-font;
+    src: url(/css/fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+@font-face {
+    font-family: $secondary-font;
+    src: url(/css/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: $secondary-font-bold;
+    src: url(/css/fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: $secondary-font-light;
+    src: url(/css/fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: $font-awesome-regular;
+    font-style: normal;
+    font-display: block;
+    src: url(/css/fonts/webfonts/fa-brands-400.woff);
+}
+@font-face {
+    font-family: $font-awesome-solid;
+    src: url(/css/fonts/webfonts/fa-solid-900.woff);
+}
+@font-face {
+    font-family: $font-awesome-brand;
+    src: url(/css/fonts/webfonts/fa-brands-400.woff);
+}

@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.scss",
+		"../sass/tools/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import './tools/variables.scss';\r\n//@import './tools/mixins';\r\n//@import './tools/functions';\r\n//@import './tools/extensions';\r\n//@import './layout/card';\r\n//@import './layout/container';\r\n//@import './layout/header';\r\n\r\n\r\n\r\n*{\r\n    box-sizing: border-box;\r\n}\r\nbody{\r\n    color: yellow;\r\n    background-color: green;\r\n}\r\n\r\n.card{\r\n    color: yellow;\r\n    background-color: green;\r\n}",
+		"\r\n\r\n$primary-color: #9356DC;\r\n$secondary-color: #FF79DA;\r\n$tertiary-color: #99E2D0;\r\n$shadow-color: lightgray;"
+	],
+	"names": [],
+	"mappings": ";AAUA,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,UAAU;CACzB;;;AACD,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,MAAM;EACb,gBAAgB,EAAE,KAAK;CAC1B;;;AAED,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,MAAM;EACb,gBAAgB,EAAE,KAAK;CAC1B"
+}

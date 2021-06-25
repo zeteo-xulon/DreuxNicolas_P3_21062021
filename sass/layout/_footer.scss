@@ -1,0 +1,29 @@
+//@import '../tools/variables';
+/*==================================== */
+/*             FOOTER              */
+/*==================================== */
+footer{
+    background: $background-color-footer;
+    padding: 1.2rem;
+    font-family: $secondary-font;
+    font-size: $footer-text-size;
+    & .logo-mini{
+        filter: brightness(100);
+        height: 2rem;
+        width: 7rem;
+    }
+    & ul{ 
+        display:flex;
+        flex-flow: column nowrap;
+        gap:0.3rem;
+        list-style-type: none;
+        padding: 0px;
+        margin: .5rem 0.5rem;
+        & li {
+            & a {
+                color: $background-text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+//@import '../tools/variables';
+//@import '../tools/mixins';
+/*==================================== */
+/*             RESTAURANT              */
+/*==================================== */
+.restaurant{
+    display: flex;
+    flex-flow: column nowrap;
+    background: $background-color-primary;
+    padding: 1rem;
+     h2{
+        @include title-size;
+    }
+}
+.card-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;   
+    gap: 1rem;
+    flex: 1 0 25%;
+}
+.card{
+    display: flex;
+    flex-flow: column nowrap;
+    min-width : 300px;
+    background: $background-color-secondary;
+    @include box-shadow;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: $secondary-font, Arial, Helvetica, sans-serif;
+    position: relative;
+    & .card__img{
+        border-radius: 20px 20px 0px 0px;
+    }
+    & .card-split{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 1rem;
+        & .card__text {
+            & h4 {
+                font-size: $card-title;
+                margin: 5px 0px;
+            }
+            & .card__text__sub{
+                margin: 0px;
+                font-size: $card-sub;
+            }
+        }
+    }
+    & .card--new{
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        background: $extra-color-primary;
+        color: $extra-color-secondary;
+        padding: 0.3rem 0.8rem;
+        border-radius: 2px;
+        font-family: $secondary-font-bold;
+    }
+} 

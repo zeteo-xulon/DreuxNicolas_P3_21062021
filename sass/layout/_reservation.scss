@@ -1,0 +1,64 @@
+
+
+//@import '../tools/variables';
+//@import '../tools/functions';
+//@import '../tools/mixins';
+
+/*==================================== */
+/*             RESERVATION              */
+/*==================================== */
+
+.reservation{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: $secondary-font-light, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    background: $background-color-primary;
+    padding-bottom: 3.5rem;
+    & .gps{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(234, 234, 234, 1);
+        width: 100%;
+        box-shadow: inset 0px 5px 5px rgba(0, 0, 0, .3);
+        color: rgba(1,1,1,.8);
+        & .fa-map-marker-alt{
+            font-size: 1.1rem;
+            position:relative;
+            right: 5%
+        }
+        & h3{
+            font-size: 1rem;
+        }
+    }
+    & h2{
+        @include title-size;
+        text-align: center;
+        padding: 3rem 3rem 0px;
+        margin: 0px;
+    }
+    & p{
+        padding: 0rem 1rem 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    & a {
+        font-family: $secondary-font-bold;
+        text-decoration-line: none;
+        color: $background-text-color;
+        background: linear-gradient( 0deg , $primary-color, $secondary-color);
+        padding: 20px 25px;
+        border-radius: 37px;
+        box-shadow: 1px 4px 7px rgba(1, 1, 1, .2);
+        transition: all 1s 1s;
+        &:hover{
+           @include linear-lighten;
+        }
+        &:active{
+            @include linear-lighten;
+        }
+    }
+}

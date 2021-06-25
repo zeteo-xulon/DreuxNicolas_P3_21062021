@@ -1,0 +1,26 @@
+
+
+@import './tools/variables.scss';
+@import './tools/mixins';
+//@import './tools/functions';
+//@import './tools/extensions';
+
+*{
+    box-sizing: border-box;
+}
+
+@import './base/typography';
+
+body{
+    margin: 0px;
+}
+
+
+@import './layout/header';
+@import './layout/reservation';
+@import './layout/fonctionnement';
+@import './layout/restaurant';
+@import './layout/footer';
+//@import './layout/container';
+
+
