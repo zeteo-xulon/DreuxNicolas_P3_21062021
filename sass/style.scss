@@ -1,9 +1,20 @@
-@import './tools/variables.scss';
 
+
+@import './tools/variables.scss';
+//@import './tools/mixins';
+//@import './tools/functions';
+//@import './tools/extensions';
 
 *{
     box-sizing: border-box;
 }
-body{
-    background-color: $primary-color;
-}
+
+//@import './layout/fonctionnement';
+@import './layout/reservation';
+//@import './layout/restaurant";
+//@import './layout/footer';
+//@import './layout/container';
+@import './layout/header';
+
+
+
