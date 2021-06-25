@@ -1,7 +1,7 @@
 
 
 @import './tools/variables.scss';
-//@import './tools/mixins';
+@import './tools/mixins';
 //@import './tools/functions';
 //@import './tools/extensions';
 
@@ -9,12 +9,18 @@
     box-sizing: border-box;
 }
 
-//@import './layout/fonctionnement';
-@import './layout/reservation';
-//@import './layout/restaurant";
-//@import './layout/footer';
-//@import './layout/container';
-@import './layout/header';
+@import './base/typography';
 
+body{
+    margin: 0px;
+}
+
+
+@import './layout/header';
+@import './layout/reservation';
+@import './layout/fonctionnement';
+@import './layout/restaurant';
+@import './layout/footer';
+//@import './layout/container';
 
 

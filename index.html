@@ -27,7 +27,7 @@
     <main>
 
     <!-- =+= RESERVATION =+=-->
-        <section>
+        <section class="reservation">
 
             <div class="gps">
                 <i class="fas fa-map-marker-alt"></i><h3>Paris, Belleville</h3>
@@ -40,52 +40,75 @@
         </section>
 
     <!-- =+= FONCTIONNEMENT =+=-->
-        <section>
+        <section class="fonctionnement">
             <h2>Fonctionnement</h2>
-            <ul>
-                <li><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
-                <li><span>2</span><i class="fa-solid fa-list"></i>Composez votre menu</li>
-                <li><span>3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
+            <ul class="function__list">
+                <li><span class="function__number">1</span>
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="function__text">Choisissez un restaurant</span>
+                </li>
+                <li><span class="function__number">2</span>
+                    <i class="fas fa-list-ul"></i>
+                    <span class="function__text">Composez votre menu</span>
+                </li>
+                <li><span class="function__number">3</span>
+                    <i class="fas fa-store"></i>
+                    <span class="function__text">Dégustez au restaurant</span>
+                </li>
             </ul>
         </section>
 
     <!-- =+= RESTAURANT =+=-->
         <section class="restaurant" id="restaurant">
-            <a href="#" class="card">
-                <img class="card__img" src="/images/restaurants/la_palette_du_gout.jpg" alt="image d'un plat gastronomique" />
-                <div>
-                    <h4>La palette du goût</h4>
-                    <p>Ménilmontant</p>
-                </div>
-                <i class="far fa-heart"><i class="fas fa-heart"></i></i>
-            </a>
+            <h2>Restaurants</h2>
 
-            <a href="#" class="card">
-                <img class="card__img" src="/images/restaurants/la_note_enchantee.jpg" alt="Plat gastronomique vue de dessus">
-                <div>
-                    <h4>La note enchantée</h4>
-                    <p>Charonne</p>
-                </div>
-                <i class="far fa-heart"><i class="fas fa-heart"></i></i>
-            </a>
-            
-            <a href="#" class="card">
-                <img class="card__img" src="/images/restaurants/a_la_francaise.jpg" alt="Plat grastronomique dans une assiette blanche" />
-                <div>
-                    <h4>À la française</h4>
-                    <p>Cité Rouge</p>
-                </div>
-                <i class="far fa-heart"><i class="fas fa-heart"></i></i>
-            </a>
-            
-            <a href="#" class="card">
-                <img class="card__img" src="/images/restaurants/le_delice_des_sens.jpg" alt="Plat grastronomique dans une assiette longue incurvée" />
-                <div>
-                    <h4>Le délice des sens</h4>
-                    <p>Folie-Méricourt</p>
-                </div>
-                <i class="far fa-heart"><i class="fas fa-heart"></i></i>
-            </a>
+            <div class="card-container">
+                <a href="#" class="card">
+                    <img class="card__img" src="/images/restaurants/la_palette_du_gout.jpg" alt="image d'un plat gastronomique" />
+                    <div class="card-split">
+                        <div class="card__text">
+                            <h4>La palette du goût</h4>
+                            <p class="card__text__sub">Ménilmontant</p>
+                        </div>
+                        <i class="far fa-heart"><i class="fas fa-heart"></i></i>
+                    </div>
+                    <p class="card--new"> Nouveau</p>
+                </a>
+
+                <a href="#" class="card">
+                    <img class="card__img" src="/images/restaurants/la_note_enchantee.jpg" alt="Plat gastronomique vue de dessus">
+                    <div class="card-split">
+                        <div class="card__text">
+                            <h4>La note enchantée</h4>
+                            <p class="card__text__sub">Charonne</p>
+                        </div>
+                        <i class="far fa-heart"><i class="fas fa-heart"></i></i>
+                    </div>
+                    <p class="card--new"> Nouveau</p>
+                </a>
+                
+                <a href="#" class="card">
+                    <img class="card__img" src="/images/restaurants/a_la_francaise.jpg" alt="Plat grastronomique dans une assiette blanche" />
+                    <div class="card-split">
+                        <div class="card__text">
+                            <h4>À la française</h4>
+                            <p class="card__text__sub">Cité Rouge</p>
+                        </div>
+                        <i class="far fa-heart"><i class="fas fa-heart"></i></i>
+                    </div>
+                </a>
+                
+                <a href="#" class="card">
+                    <img class="card__img" src="/images/restaurants/le_delice_des_sens.jpg" alt="Plat grastronomique dans une assiette longue incurvée" />
+                    <div class="card-split">
+                        <div class="card__text">
+                            <h4>Le délice des sens</h4>
+                            <p class="card__text__sub">Folie-Méricourt</p>
+                        </div>
+                        <i class="far fa-heart"><i class="fas fa-heart"></i></i>
+                    </div>
+                </a>
+            </div>
 
         </section>
 
@@ -96,7 +119,7 @@
     <!--==========================================-->
 
     <footer>
-        <img class="logo-mini" src="/dreux_nicolas/images/logo/ohmyfood@2x.svg" alt="logo miniature"/>
+        <img class="logo-mini" src="./images/logo/ohmyfood@2x.svg" alt="logo miniature"/>
         <ul>
             <li><a href="#">Proposer un restaurant</a></li>
             <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>

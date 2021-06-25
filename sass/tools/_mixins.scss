@@ -1,0 +1,15 @@
+@import '../tools/variables';
+@import '../tools/functions';
+
+@mixin title-size{
+    font-family: $secondary-font-bold;
+    font-size: $title-size;
+}
+
+@mixin box-shadow{
+    box-shadow: 5px 5px 7px  rgba(1,1,1, .1);
+}
+@mixin linear-lighten($color1: $primary-color, $color2: $secondary-color){
+    background: linear-gradient( 0deg , lighten($color1, 5%), lighten($color2, 5%));
+            box-shadow: 1px 4px 7px rgba(1, 1, 1, .4);
+}
