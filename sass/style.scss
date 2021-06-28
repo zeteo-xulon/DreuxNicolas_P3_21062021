@@ -1,6 +1,6 @@
 
 
-@import './tools/variables.scss';
+@import './tools/variables';
 @import './tools/mixins';
 //@import './tools/functions';
 //@import './tools/extensions';
@@ -20,7 +20,9 @@ body{
 @import './layout/reservation';
 @import './layout/fonctionnement';
 @import './layout/restaurant';
+@import './layout/menu';
 @import './layout/footer';
 //@import './layout/container';
+
 
 

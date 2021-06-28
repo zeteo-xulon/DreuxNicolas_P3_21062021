@@ -1,0 +1,29 @@
+/*==================================== */
+/*             MENU              */
+/*==================================== */
+@import '../tools/variables';
+
+.top__img{
+    z-index: 1;
+    height: 250px;
+    & img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+.menu{
+    z-index: 2;
+    position:relative;
+    bottom: 50px;
+    background:$background-color-primary ;
+    border-radius: 30px;
+    padding: 
+    & h1{
+        font-family: $primary-font;
+        font-family: shrikhand;
+        padding-top: 8%;
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+}

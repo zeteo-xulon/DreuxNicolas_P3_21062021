@@ -60,7 +60,7 @@ header .logo {
   left: 25%;
 }
 
-header .btn-home .fa-arrow-left {
+.fa-arrow-left {
   width: 100%;
   height: 100%;
   font-size: 5vw;
@@ -200,6 +200,7 @@ header .btn-home .fa-arrow-left {
   flex-flow: column nowrap;
   background: #f6f6f6;
   padding: 1rem;
+  margin-bottom: 5%;
 }
 
 .restaurant h2 {
@@ -210,6 +211,7 @@ header .btn-home .fa-arrow-left {
 .card-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
   gap: 1rem;
   flex: 1 0 25%;
@@ -226,27 +228,36 @@ header .btn-home .fa-arrow-left {
   color: black;
   font-family: roboto, Arial, Helvetica, sans-serif;
   position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  max-height: 500px;
 }
 
 .card .card__img {
   border-radius: 20px 20px 0px 0px;
+  height: 70%;
+  object-fit: cover;
 }
 
 .card .card-split {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding: 1rem;
+  background: white;
+  padding: 5px 20PX;
+  height: 100%;
+  border-radius: 30px;
 }
 
 .card .card-split .card__text h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 5px 0px;
 }
 
 .card .card-split .card__text .card__text__sub {
   margin: 0px;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .card .card--new {
@@ -258,6 +269,34 @@ header .btn-home .fa-arrow-left {
   padding: 0.3rem 0.8rem;
   border-radius: 2px;
   font-family: roboto-bold;
+}
+
+/*==================================== */
+/*             MENU              */
+/*==================================== */
+.top__img {
+  z-index: 1;
+  height: 250px;
+}
+
+.top__img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu {
+  z-index: 2;
+  position: relative;
+  bottom: 50px;
+  background: #f6f6f6;
+  border-radius: 30px;
+  padding: .menu h1;
+  padding-font-family: shrikhand;
+  padding-font-family: shrikhand;
+  padding-padding-top: 8%;
+  padding-font-weight: normal;
+  padding-font-size: 1.2rem;
 }
 
 /*==================================== */

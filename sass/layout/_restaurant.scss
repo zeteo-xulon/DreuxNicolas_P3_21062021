@@ -8,6 +8,7 @@
     flex-flow: column nowrap;
     background: $background-color-primary;
     padding: 1rem;
+    margin-bottom: 5%;
      h2{
         @include title-size;
     }
@@ -15,6 +16,7 @@
 .card-container{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     width: 100%;   
     gap: 1rem;
     flex: 1 0 25%;
@@ -30,14 +32,23 @@
     color: black;
     font-family: $secondary-font, Arial, Helvetica, sans-serif;
     position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 250px;
+    max-height: 500px;
     & .card__img{
         border-radius: 20px 20px 0px 0px;
+        height: 70%;
+        object-fit: cover;
     }
     & .card-split{
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        padding: 1rem;
+        background: $background-card-split;
+        padding: 5px 20PX;
+        height: 100%;
+        border-radius: 30px;
         & .card__text {
             & h4 {
                 font-size: $card-title;
