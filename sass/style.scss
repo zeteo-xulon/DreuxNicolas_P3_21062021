@@ -15,7 +15,7 @@ body{
     margin: 0px;
 }
 
-
+@import './layout/loader';
 @import './layout/header';
 @import './layout/reservation';
 @import './layout/fonctionnement';
@@ -23,6 +23,6 @@ body{
 @import './layout/menu';
 @import './layout/footer';
 //@import './layout/container';
-
+@import './component/buttons';
 
 

@@ -1,0 +1,15 @@
+/* ======= LOADER ==========*/
+.loading{
+    position:fixed;
+    background-color: $background-color-footer;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    & .spinner{
+        z-index: 7;
+        border-top:5px dotted  $secondary-color;
+        border-left: 5px dotted $secondary-color;
+        border-bottom: 5px dotted $secondary-color;
+    }
+}

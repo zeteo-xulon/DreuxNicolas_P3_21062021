@@ -1,0 +1,22 @@
+.btn-push{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $secondary-font;
+    text-decoration-line: none;
+    color: $background-text-color;
+    background: linear-gradient( 0deg , $primary-color, $secondary-color);
+    width: 75%;
+    max-width: 220px;
+    height: 50px;
+    border-radius: 37px;
+    box-shadow: 1px 4px 7px rgba(1, 1, 1, .2);
+    transition: all 1s 1s;
+    &:hover{
+        @include linear-lighten;
+    }
+    &:active{
+        @include linear-lighten;
+    }
+}

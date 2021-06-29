@@ -12,18 +12,69 @@
         width: 100%;
     }
 }
+main{
+     background-color: $background-color-primary;
+}
 .menu{
     z-index: 2;
     position:relative;
     bottom: 50px;
     background:$background-color-primary ;
-    border-radius: 30px;
-    padding: 
-    & h1{
+    border-radius: 30px 30px 0px 0px;
+    padding: 10px;
+    & .menu__main-title{
         font-family: $primary-font;
-        font-family: shrikhand;
-        padding-top: 8%;
         font-weight: normal;
-        font-size: 1.2rem;
+        font-size: $menu-main-title-size;
+        margin: 1rem 0rem 2rem 0rem;
+    }
+    & .center-box{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+.menu__box{
+    display: flex;
+    flex-flow: column nowrap;
+    //animation d'apparition ?
+    & .menu__title{
+        @include menu-title;
+    }
+    & .menu__bar{
+        width: 40px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    & .plat-container{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        margin: 1rem 0rem 2.5rem 0rem;
+        & .menu__plat{
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 0 30%;
+            color: $default-text-color;
+            background-color: $background-text-color;
+            min-width: 270px;
+            border-radius: 20px;
+            @include box-shadow;
+            padding: 10px;
+            & .title__plat{
+                font-family: $secondary-font-bold;
+                font-size: $plat-title;
+                margin: 3px 0px;
+            }
+            & .menu__text{
+                display: flex;
+                justify-content: space-between;
+                font-family: $secondary-font;
+                font-size: $plat-text;
+                margin: 2px 0px;
+                & .plat__price{
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
