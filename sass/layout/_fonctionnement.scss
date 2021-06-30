@@ -17,18 +17,6 @@
     flex-flow: row wrap;
     padding: 0px;
     gap: 1rem;
-    & li{
-        display: flex;
-        align-items: center;
-        list-style: none;
-        background: $background-color-primary;
-        flex: 1 0 30%;
-        min-width: 300px;
-        gap: 1rem;
-        padding: 1.4rem 1rem;
-        border-radius: 20px;
-        @include box-shadow;
-    }
     & .function__number{
         position: relative;
         right: 30px;
@@ -41,11 +29,32 @@
     & .fas{
         font-size: 1.2rem;
         color: gray;
-        &:hover, :active{
-            color: $primary-color;
-        }
         & .function__text{
             justify-items: center;
         }
+    }
+}
+
+.function__cell{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background: $background-color-primary;
+    flex: 1 0 30%;
+    min-width: 300px;
+    gap: 1rem;
+    padding: 1.4rem 1rem;
+    border-radius: 20px;
+    @include box-shadow;
+    &:hover .fas,
+    &:active .fas{
+        color: $primary-color;
+        transition: .5s;
+    }
+    &:hover,
+    &:active{
+        background: lighten($primary-color, $amount: 35);
+        transition: .5s;
+        box-shadow: 2px 3px 4px lightgray;
     }
 }

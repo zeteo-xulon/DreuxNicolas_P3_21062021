@@ -1,3 +1,5 @@
+
+/* =+ BUTTON += */
 .btn-push{
     display: flex;
     justify-content: center;
@@ -12,11 +14,45 @@
     height: 50px;
     border-radius: 37px;
     box-shadow: 1px 4px 7px rgba(1, 1, 1, .2);
-    transition: all 1s 1s;
     &:hover{
         @include linear-lighten;
+        box-shadow: 1px 3px 5px rgba(1, 1, 1, .3);
+        transition: 0.4s;
     }
     &:active{
         @include linear-lighten;
+        box-shadow: 1px 2px 2px rgba(1, 1, 1, .4);
+        transition: 0.2s;
     }
 }
+/* =+ HEART += */
+
+.heart-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    &:hover .heart2,
+    &:active .heart2{
+        color: $secondary-color;
+        transition: all 1s;
+        transform: scale(1, 1);
+        transform-origin: bottom;
+    }
+    & .heart1{
+        font-size: 2rem;
+        position: absolute;
+        z-index: 3;
+    }
+    & .heart2{
+        font-size: 2rem;
+        position: absolute;
+        left:0px;
+        z-index: 1;
+        color: transparent;
+        transform: scale(0,0);
+    }
+  }
