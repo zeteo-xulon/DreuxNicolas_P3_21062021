@@ -1,0 +1,36 @@
+/*===== KEYFRAMES ====== */
+
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  @keyframes strafe{
+    from {
+      transform: translateX(0px)
+    }
+    25%{
+      transform: translateX(65px)
+    }
+      75%{
+      transform: translateX(-65px)
+    }
+    to{
+      transform: translateX(0px)
+    }
+  }
+  @keyframes loader{
+      0% {
+        background-color: $background-color-footer;
+      }
+      99%{
+        background-color: $background-color-footer;
+      }
+      100%{
+        background-color: transparent;
+        display: none;
+      }
+  }

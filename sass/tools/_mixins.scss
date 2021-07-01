@@ -18,3 +18,8 @@
     font-size: $size;
     margin: 5px 0px;
 }
+@mixin center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}

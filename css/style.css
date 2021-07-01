@@ -45,19 +45,43 @@ body {
 
 /* ======= LOADER ==========*/
 .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   background-color: #353535;
-  z-index: 5;
+  z-index: 900;
   height: 100%;
   width: 100%;
   margin: 0px;
+  animation: loader 3s both;
 }
 
-.loading .spinner {
-  z-index: 7;
-  border-top: 5px dotted #FF79DA;
-  border-left: 5px dotted #FF79DA;
-  border-bottom: 5px dotted #FF79DA;
+.loading .square {
+  height: 300px;
+  width: 300px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 3s linear infinite paused;
+  border: 5px double #FF79DA;
+}
+
+.loading .square .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background: #9356DC;
+  border-radius: 50%;
+  animation: spin .5s linear infinite paused reverse, strafe 3s linear infinite paused;
+}
+
+.loading .square .circle .circle__text {
+  color: white;
+  font-family: shrikhand, Arial, Helvetica, sans-serif;
 }
 
 /*==================================== */
