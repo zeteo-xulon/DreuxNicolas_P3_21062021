@@ -4,39 +4,39 @@
 
 @font-face {
   font-family: shrikhand;
-  src: url(/css/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  src: url(./fonts/Shrikhand/Shrikhand-Regular.ttf);
 }
 
 @font-face {
   font-family: roboto;
-  src: url(/css/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(./fonts/Roboto/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: roboto-bold;
-  src: url(/css/fonts/Roboto/Roboto-Bold.ttf);
+  src: url(./fonts/Roboto/Roboto-Bold.ttf);
 }
 
 @font-face {
   font-family: roboto-light;
-  src: url(/css/fonts/Roboto/Roboto-Light.ttf);
+  src: url(./fonts/Roboto/Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: "Font Awesome Regular";
   font-style: normal;
   font-display: block;
-  src: url(/css/fonts/webfonts/fa-brands-400.woff);
+  src: url(./fonts/webfonts/fa-brands-400.woff);
 }
 
 @font-face {
   font-family: "Font Awesome Solid";
-  src: url(/css/fonts/webfonts/fa-solid-900.woff);
+  src: url(./fonts/webfonts/fa-solid-900.woff);
 }
 
 @font-face {
   font-family: "Font Awesome Brand";
-  src: url(/css/fonts/webfonts/fa-brands-400.woff);
+  src: url(./fonts/webfonts/fa-brands-400.woff);
 }
 
 body {
@@ -154,7 +154,7 @@ body {
 /*             HEADER              */
 /*==================================== */
 header {
-  margin-top: 10px;
+  padding-top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -392,7 +392,7 @@ main {
   bottom: 50px;
   background: #f6f6f6;
   border-radius: 30px 30px 0px 0px;
-  padding: 10px;
+  padding: 15px;
   /* == To center the button at the bottom of the menu == */
 }
 
