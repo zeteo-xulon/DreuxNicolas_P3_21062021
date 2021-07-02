@@ -43,6 +43,68 @@ body {
   margin: 0px;
 }
 
+/*===== KEYFRAMES ====== */
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes strafe {
+  from {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(65px);
+  }
+  75% {
+    transform: translateX(-65px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  99.99% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(3000px);
+  }
+}
+
+@keyframes btn {
+  from {
+    background: linear-gradient(0deg, #a16be0, #ff93e1);
+    box-shadow: 1px 3px 5px rgba(1, 1, 1, 0.4);
+    transition: 0.4s;
+  }
+  to {
+    background: linear-gradient(0deg, #a16be0, #ff93e1);
+    box-shadow: 1px 2px 3px rgba(1, 1, 1, 0.6);
+    transition: 0.2s;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* ======= LOADER ==========*/
 .loading {
   display: flex;
@@ -54,17 +116,19 @@ body {
   height: 100%;
   width: 100%;
   margin: 0px;
-  animation: loader 3s both;
+  opacity: 1;
+  transform: translateX(0px);
+  animation: loader 3.5s both;
 }
 
 .loading .square {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   background-color: #99E2D0;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: spin 3s linear infinite paused;
+  animation: spinning 3s linear infinite;
   border: 5px double #FF79DA;
 }
 
@@ -72,22 +136,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   background: #9356DC;
   border-radius: 50%;
-  animation: spin .5s linear infinite paused reverse, strafe 3s linear infinite paused;
+  animation: spinning .5s linear infinite paused reverse, strafe 3s linear infinite;
 }
 
 .loading .square .circle .circle__text {
   color: white;
   font-family: shrikhand, Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  animation: spinning 3s linear infinite reverse;
 }
 
 /*==================================== */
 /*             HEADER              */
 /*==================================== */
 header {
+  margin-top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -104,8 +171,9 @@ header .logo {
 .fa-arrow-left {
   width: 100%;
   height: 100%;
-  font-size: 5vw;
+  font-size: clamp(16px, 5vw, 30px);
   color: black;
+  margin-left: 100%;
 }
 
 /*==================================== */
@@ -272,6 +340,7 @@ header .logo {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   background: white;
   padding: 5px 20PX;
   height: 100%;
@@ -324,9 +393,17 @@ main {
   background: #f6f6f6;
   border-radius: 30px 30px 0px 0px;
   padding: 10px;
+  /* == To center the button at the bottom of the menu == */
 }
 
-.menu .menu__main-title {
+.menu .title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .title .menu__main-title {
   font-family: shrikhand;
   font-weight: normal;
   font-size: 1.8rem;
@@ -362,34 +439,53 @@ main {
   margin: 1rem 0rem 2.5rem 0rem;
 }
 
-.menu__box .plat-container .menu__plat {
+.menu__box .plat-container .plat-box {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
   flex: 1 0 30%;
   color: #010101;
   background-color: white;
   min-width: 270px;
   border-radius: 20px;
   box-shadow: 5px 5px 7px rgba(1, 1, 1, 0.1);
-  padding: 10px;
 }
 
-.menu__box .plat-container .menu__plat .title__plat {
+.menu__box .plat-container .plat-box .menu__plat {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu__box .plat-container .plat-box .menu__plat .title__plat {
   font-family: roboto-bold;
   font-size: 1.1rem;
   margin: 3px 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.menu__box .plat-container .menu__plat .menu__text {
+.menu__box .plat-container .plat-box .menu__plat .menu__text {
   display: flex;
   justify-content: space-between;
   font-family: roboto;
   font-size: 0.9rem;
   margin: 2px 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.menu__box .plat-container .menu__plat .menu__text .plat__price {
-  font-weight: bold;
+.menu__box .plat-container .plat-box .plat__price {
+  font-family: roboto-bold;
+  padding: 10px;
+  text-overflow: clip;
+  overflow: visible;
 }
 
 /*==================================== */
@@ -400,6 +496,7 @@ footer {
   padding: 1.2rem;
   font-family: roboto;
   font-size: 1.2rem;
+  padding-bottom: 30px;
 }
 
 footer .logo-mini {
@@ -414,12 +511,37 @@ footer ul {
   gap: 0.3rem;
   list-style-type: none;
   padding: 0px;
-  margin: .5rem 0.5rem;
+  margin: .5rem 0rem;
+}
+
+footer ul li {
+  margin-top: 5px;
 }
 
 footer ul li a {
   color: white;
   text-decoration: none;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+footer ul li a .fa-utensils {
+  font-size: 1rem;
+  margin-right: .6rem;
+}
+
+footer ul li a .fa-hands-helping {
+  font-size: .8rem;
+  margin-right: .5rem;
+  transform: rotate(-10deg);
+}
+
+footer li:nth-child(1) {
+  font-family: roboto-bold;
+}
+
+footer li:nth-child(2) {
+  font-family: roboto-bold;
 }
 
 /* =+ BUTTON += */
@@ -436,21 +558,15 @@ footer ul li a {
   max-width: 220px;
   height: 50px;
   border-radius: 37px;
-  box-shadow: 1px 4px 7px rgba(1, 1, 1, 0.2);
+  box-shadow: 2px 4px 9px rgba(1, 1, 1, 0.3);
 }
 
 .btn-push:hover {
-  background: linear-gradient(0deg, #a16be0, #ff93e1);
-  box-shadow: 1px 4px 7px rgba(1, 1, 1, 0.4);
-  box-shadow: 1px 3px 5px rgba(1, 1, 1, 0.3);
-  transition: 0.4s;
+  animation: btn 1s both;
 }
 
 .btn-push:active {
-  background: linear-gradient(0deg, #a16be0, #ff93e1);
-  box-shadow: 1px 4px 7px rgba(1, 1, 1, 0.4);
-  box-shadow: 1px 2px 2px rgba(1, 1, 1, 0.4);
-  transition: 0.2s;
+  animation: btn .3s both;
 }
 
 /* =+ HEART += */
@@ -466,23 +582,22 @@ footer ul li a {
 
 .heart-box:hover .heart2,
 .heart-box:active .heart2 {
-  color: #FF79DA;
   transition: all 1s;
   transform: scale(1, 1);
   transform-origin: bottom;
 }
 
 .heart-box .heart1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   z-index: 3;
 }
 
 .heart-box .heart2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   left: 0px;
   z-index: 1;
-  color: transparent;
+  color: #99E2D0;
   transform: scale(0, 0);
 }

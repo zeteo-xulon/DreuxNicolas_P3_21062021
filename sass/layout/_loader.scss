@@ -7,23 +7,27 @@
     height: 100%;
     width: 100%;
     margin:0px;
-    animation: loader 3s both;
+    opacity: 1;
+    transform: translateX(0px);
+    animation: loader 3.5s both;
     .square{
-        height: 300px; width: 300px;
+        height: 200px; width: 200px;
         background-color: $tertiary-color;
         @include center;
-        animation: spin 3s linear infinite paused;
+        animation: spinning 3s linear infinite;
         border: 5px double $secondary-color;
         & .circle{
              @include center;
-             height: 100px;
-             width: 100px;
+             height: 80px;
+             width: 80px;
              background: $primary-color;
              border-radius: 50%;
-             animation: spin .5s linear infinite paused reverse, strafe 3s linear infinite paused;
+             animation: spinning .5s linear infinite paused reverse, strafe 3s linear infinite;
           & .circle__text{
             color: white;
             font-family: $primary-font, Arial, Helvetica, sans-serif;
+            font-size: 0.8rem;
+            animation: spinning 3s linear infinite reverse;
           }
         }
       }

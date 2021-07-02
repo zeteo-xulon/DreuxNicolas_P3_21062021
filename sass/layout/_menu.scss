@@ -22,12 +22,19 @@ main{
     background:$background-color-primary ;
     border-radius: 30px 30px 0px 0px;
     padding: 10px;
-    & .menu__main-title{
-        font-family: $primary-font;
-        font-weight: normal;
-        font-size: $menu-main-title-size;
-        margin: 1rem 0rem 2rem 0rem;
+    & .title{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        & .menu__main-title{
+            font-family: $primary-font;
+            font-weight: normal;
+            font-size: $menu-main-title-size;
+            margin: 1rem 0rem 2rem 0rem;
+        }
     }
+    /* == To center the button at the bottom of the menu == */
     & .center-box{
         display: flex;
         justify-content: center;
@@ -50,30 +57,48 @@ main{
         flex-flow: row wrap;
         gap: 1rem;
         margin: 1rem 0rem 2.5rem 0rem;
-        & .menu__plat{
+        & .plat-box{
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
             flex: 1 0 30%;
             color: $default-text-color;
             background-color: $background-text-color;
             min-width: 270px;
             border-radius: 20px;
             @include box-shadow;
-            padding: 10px;
-            & .title__plat{
-                font-family: $secondary-font-bold;
-                font-size: $plat-title;
-                margin: 3px 0px;
-            }
-            & .menu__text{
+            & .menu__plat{
                 display: flex;
-                justify-content: space-between;
-                font-family: $secondary-font;
-                font-size: $plat-text;
-                margin: 2px 0px;
-                & .plat__price{
-                    font-weight: bold;
+                flex-flow: column nowrap;
+                padding: 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                & .title__plat{
+                    font-family: $secondary-font-bold;
+                    font-size: $plat-title;
+                    margin: 3px 0px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
+                & .menu__text{
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: $secondary-font;
+                    font-size: $plat-text;
+                    margin: 2px 0px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+            & .plat__price{
+                font-family: $secondary-font-bold;
+                padding: 10px;
+                text-overflow: clip;
+                overflow: visible;
             }
         }
     }

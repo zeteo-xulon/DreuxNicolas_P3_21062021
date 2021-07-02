@@ -11,7 +11,7 @@
 }
 @mixin linear-lighten($color1: $primary-color, $color2: $secondary-color){
     background: linear-gradient( 0deg , lighten($color1, 5%), lighten($color2, 5%));
-            box-shadow: 1px 4px 7px rgba(1, 1, 1, .4);
+    box-shadow: 1px 4px 7px rgba(1, 1, 1, .4);
 }
 @mixin menu-title($font: $secondary-font-light, $size:$menu-title-size){
     font-family: $font;
