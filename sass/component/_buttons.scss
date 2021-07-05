@@ -34,7 +34,7 @@
     &:hover .heart2,
     &:active .heart2{
         transition: all 1s;
-        transform: scale(1, 1);
+        transform: scale(0.85, 0.85);
         transform-origin: bottom;
     }
     & .heart1{
@@ -45,9 +45,13 @@
     & .heart2{
         font-size: 1.5rem;
         position: absolute;
-        left:0px;
-        z-index: 1;
-        color: $tertiary-color;
+        z-index: 2;
+        left: 0.2px;
+        bottom: 2px;
+        background: -webkit-linear-gradient(90deg, #9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        //color: transparent;
         transform: scale(0,0);
     }
   }
