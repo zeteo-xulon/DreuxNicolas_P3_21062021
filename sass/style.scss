@@ -2,8 +2,6 @@
 
 @import './tools/variables';
 @import './tools/mixins';
-//@import './tools/functions';
-//@import './tools/extensions';
 
 *{
     box-sizing: border-box;
@@ -24,7 +22,6 @@ body{
 @import './layout/restaurant';
 @import './layout/menu';
 @import './layout/footer';
-//@import './layout/container';
 @import './component/buttons';
 
 

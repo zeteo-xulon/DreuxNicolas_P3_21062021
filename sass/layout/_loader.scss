@@ -22,7 +22,7 @@
              width: 80px;
              background: $primary-color;
              border-radius: 50%;
-             animation: spinning .5s linear infinite paused reverse, strafe 3s linear infinite;
+             animation: spinning .5s linear infinite reverse, strafe 3s linear infinite;
           & .circle__text{
             color: white;
             font-family: $primary-font, Arial, Helvetica, sans-serif;
