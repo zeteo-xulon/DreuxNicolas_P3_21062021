@@ -102,10 +102,12 @@ main{
       transition: all 1s;
     }
   }
-  &:hover .green-box{
+  &:hover .green-box,
+  &:active .green-box{
     width: 90px;
   }
-  &:hover .fa-check-circle{
+  &:hover .fa-check-circle,
+  &:active .fa-check-circle{
     transform: rotate(360deg);
   }
 }

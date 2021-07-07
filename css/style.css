@@ -486,11 +486,13 @@ main {
   transition: all 1s;
 }
 
-.plat-box:hover .green-box {
+.plat-box:hover .green-box,
+.plat-box:active .green-box {
   width: 90px;
 }
 
-.plat-box:hover .fa-check-circle {
+.plat-box:hover .fa-check-circle,
+.plat-box:active .fa-check-circle {
   transform: rotate(360deg);
 }
 
