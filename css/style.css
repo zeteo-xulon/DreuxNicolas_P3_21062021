@@ -158,24 +158,28 @@ body {
 header {
   padding-top: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 14vw;
+  max-height: 150px;
   width: 100%;
 }
 
 header .logo {
   width: 47%;
-  position: absolute;
-  left: 25%;
+  max-width: 450px;
 }
 
-.fa-arrow-left {
+header .btn-home {
+  position: absolute;
+  left: 1.5vw;
+}
+
+header .btn-home .fa-arrow-left {
   width: 100%;
   height: 100%;
   font-size: clamp(16px, 5vw, 30px);
   color: black;
-  margin-left: 100%;
 }
 
 /*==================================== */
@@ -441,29 +445,70 @@ main {
   margin: 1rem 0rem 2.5rem 0rem;
 }
 
-.menu__box .plat-container .plat-box {
+/* 
+      Sub Container code, 
+      HOVER code
+ */
+.plat-box {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex: 1 0 30%;
   color: #010101;
   background-color: white;
   min-width: 270px;
+  height: 70px;
   border-radius: 20px;
   box-shadow: 5px 5px 7px rgba(1, 1, 1, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.menu__box .plat-container .plat-box .menu__plat {
+.plat-box .green-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  background-repeat: no-repeat;
+  border-radius: 0px 20px 20px 0px;
+  width: 0px;
+  height: 100%;
+  transition: all 1s;
+}
+
+.plat-box .green-box .fa-check-circle {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  transition: all 1s;
+}
+
+.plat-box:hover .green-box {
+  width: 90px;
+}
+
+.plat-box:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
+/* 
+      All the code about the menu
+ */
+.menu__plat {
   display: flex;
   flex-flow: column nowrap;
-  padding: 10px;
+  width: 100%;
+  margin: 0px 0px;
+  padding: 5px 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.menu__box .plat-container .plat-box .menu__plat .title__plat {
+.menu__plat .title__plat {
   font-family: roboto-bold;
   font-size: 1.1rem;
   margin: 3px 0px;
@@ -472,9 +517,17 @@ main {
   text-overflow: ellipsis;
 }
 
-.menu__box .plat-container .plat-box .menu__plat .menu__text {
+.menu__plat .menu__plat__separator {
   display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   justify-content: space-between;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu__plat .menu__plat__separator .menu__text {
   font-family: roboto;
   font-size: 0.9rem;
   margin: 2px 0px;
@@ -483,21 +536,25 @@ main {
   overflow: hidden;
 }
 
-.menu__box .plat-container .plat-box .plat__price {
+.menu__plat .menu__plat__separator .plat__price {
+  display: block;
   font-family: roboto-bold;
-  padding: 10px;
-  text-overflow: clip;
-  overflow: visible;
 }
 
+/* == *ANIMATION == */
 .entree {
   animation: appear 0.5s ease-in-out both;
 }
 
 .plat {
-  animation: appear 0.5s .3s ease-in-out both;
+  animation: appear 0.5s .6s ease-in-out both;
 }
 
+.dessert {
+  animation: appear 0.5s 1.2s ease-in-out both;
+}
+
+/* ==== */
 .entree .plat-box:nth-of-type(1) {
   animation: appear 1s .2s linear both;
 }
@@ -508,6 +565,10 @@ main {
 
 .entree .plat-box:nth-of-type(3) {
   animation: appear 1s .6s linear both;
+}
+
+.entree .plat-box:nth-of-type(4) {
+  animation: appear 1s .7s linear both;
 }
 
 /* ==== */
@@ -523,17 +584,25 @@ main {
   animation: appear 1s 1.2s linear both;
 }
 
+.plat .plat-box:nth-of-type(4) {
+  animation: appear 1s 1.3s linear both;
+}
+
 /* ==== */
 .dessert .plat-box:nth-of-type(1) {
-  animation: appear 1s .8s linear both;
+  animation: appear 1s 1.4s linear both;
 }
 
 .dessert .plat-box:nth-of-type(2) {
-  animation: appear 1s 1s linear both;
+  animation: appear 1s 1.5s linear both;
 }
 
 .dessert .plat-box:nth-of-type(3) {
-  animation: appear 1s 1.2s linear both;
+  animation: appear 1s 1.7s linear both;
+}
+
+.dessert .plat-box:nth-of-type(4) {
+  animation: appear 1s 1.9s linear both;
 }
 
 /*==================================== */
@@ -631,7 +700,7 @@ footer li:nth-child(2) {
 .heart-box:hover .heart2,
 .heart-box:active .heart2 {
   transition: all 1s;
-  transform: scale(0.85, 0.85);
+  transform: scale(1.05, 1.05);
   transform-origin: bottom;
 }
 
@@ -645,8 +714,7 @@ footer li:nth-child(2) {
   font-size: 1.5rem;
   position: absolute;
   z-index: 2;
-  left: 0.2px;
-  bottom: 2px;
+  left: 0px;
   background: -webkit-linear-gradient(90deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

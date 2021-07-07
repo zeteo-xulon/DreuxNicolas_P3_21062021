@@ -57,59 +57,116 @@ main{
         flex-flow: row wrap;
         gap: 1rem;
         margin: 1rem 0rem 2.5rem 0rem;
-        & .plat-box{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex: 1 0 30%;
-            color: $default-text-color;
-            background-color: $background-text-color;
-            min-width: 270px;
-            border-radius: 20px;
-            @include box-shadow;
-            & .menu__plat{
-                display: flex;
-                flex-flow: column nowrap;
-                padding: 10px;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                & .title__plat{
-                    font-family: $secondary-font-bold;
-                    font-size: $plat-title;
-                    margin: 3px 0px;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                }
-                & .menu__text{
-                    display: flex;
-                    justify-content: space-between;
-                    font-family: $secondary-font;
-                    font-size: $plat-text;
-                    margin: 2px 0px;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                }
-            }
-            & .plat__price{
-                font-family: $secondary-font-bold;
-                padding: 10px;
-                text-overflow: clip;
-                overflow: visible;
-            }
-        }
     }
 }
+
+/* 
+      Sub Container code, 
+      HOVER code
+ */
+
+.plat-box{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 30%;
+  color: $default-text-color;
+  background-color: $background-text-color;
+  min-width: 270px;
+  height: 70px;
+  border-radius: 20px;
+  @include box-shadow;
+  white-space: nowrap;
+  overflow: hidden;
+  & .green-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: $tertiary-color;
+    background-repeat:  no-repeat;
+    border-radius: 0px 20px 20px 0px;
+    
+    width: 0px;
+    height: 100%;
+    
+    transition: all 1s;
+    & .fa-check-circle{
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.2rem;
+      
+      transition: all 1s;
+    }
+  }
+  &:hover .green-box{
+    width: 90px;
+  }
+  &:hover .fa-check-circle{
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+      All the code about the menu
+ */
+.menu__plat{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 0px 0px;
+  padding:5px 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  & .title__plat{
+    font-family: $secondary-font-bold;
+    font-size: $plat-title;
+    margin: 3px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  & .menu__plat__separator{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    & .menu__text{
+      font-family: $secondary-font;
+      font-size: $plat-text;
+      margin: 2px 0px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    & .plat__price{
+      display: block;
+      font-family: $secondary-font-bold;
+    }
+  }   
+}
+
+
+/* == *ANIMATION == */
 
 .entree{
     animation: appear 0.5s ease-in-out both;
   }
   .plat{
-    animation: appear 0.5s .3s ease-in-out both;
+    animation: appear 0.5s .6s ease-in-out both;
   }
+  .dessert{
+    animation: appear 0.5s 1.2s ease-in-out both;
+  }
+
+  /* ==== */
   .entree .plat-box:nth-of-type(1){
     animation: appear 1s .2s linear both;
   }
@@ -118,6 +175,9 @@ main{
   }
   .entree .plat-box:nth-of-type(3){
     animation: appear 1s .6s linear both;
+  }
+  .entree .plat-box:nth-of-type(4){
+    animation: appear 1s .7s linear both;
   }
   
   /* ==== */
@@ -131,15 +191,22 @@ main{
   .plat .plat-box:nth-of-type(3){
     animation: appear 1s 1.2s linear both;
   }
+  .plat .plat-box:nth-of-type(4){
+    animation: appear 1s 1.3s linear both;
+  }
+
 
    /* ==== */
   
    .dessert .plat-box:nth-of-type(1){
-    animation: appear 1s .8s linear both;
+    animation: appear 1s 1.4s linear both;
   }
   .dessert .plat-box:nth-of-type(2){
-    animation: appear 1s 1s linear both;
+    animation: appear 1s 1.5s linear both;
   }
   .dessert .plat-box:nth-of-type(3){
-    animation: appear 1s 1.2s linear both;
+    animation: appear 1s 1.7s linear both;
+  }
+  .dessert .plat-box:nth-of-type(4){
+    animation: appear 1s 1.9s linear both;
   }
