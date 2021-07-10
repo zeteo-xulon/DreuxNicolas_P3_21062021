@@ -543,6 +543,10 @@ main {
   font-family: roboto-bold;
 }
 
+.round-fix {
+  /* with that div, the round stay complete during the animation */
+}
+
 /* == *ANIMATION == */
 .entree {
   animation: appear 0.5s ease-in-out both;
@@ -717,7 +721,7 @@ footer li:nth-child(2) {
   position: absolute;
   z-index: 2;
   left: 0px;
-  background: -webkit-linear-gradient(90deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(90deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(0, 0);
