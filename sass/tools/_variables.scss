@@ -3,13 +3,15 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$default-text-color: rgba(1, 1, 1, 1);
 $extra-color-primary: rgba(153,226,208,1);
 $extra-color-secondary: rgba(0,135,102,1);
 
-$background-text-color: rgba(255, 255, 255, 1);
 $background-color-primary: rgba(246,246,246,1);
 $background-color-secondary: rgba(255, 255, 255, 1);
 $background-color-footer: rgba(53,53,53,1);
+$background-text-color: rgba(255, 255, 255, 1);
+$background-card-split: rgba(255, 255, 255, 1);
 $shadow-color: lightgray;
 
 $primary-font: shrikhand;
@@ -21,6 +23,10 @@ $font-awesome-solid: 'Font Awesome Solid';
 $font-awesome-brand: 'Font Awesome Brand';
 
 $title-size: 1.5rem;
-$card-title: 1.1rem;
-$card-sub: 1rem;
+$card-title: 1.2rem;
+$card-sub: 1.2rem;
+$menu-main-title-size: 1.8rem;
+$menu-title-size: 1.1rem;
+$plat-title: 1.1rem;
+$plat-text: 0.9rem;
 $footer-text-size:1.2rem;

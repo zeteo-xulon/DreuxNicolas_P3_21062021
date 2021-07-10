@@ -1,0 +1,217 @@
+/*==================================== */
+/*             MENU              */
+/*==================================== */
+@import '../tools/variables';
+
+.top__img{
+    z-index: 1;
+    height: 250px;
+    & img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+main{
+     background-color: $background-color-primary;
+}
+.menu{
+    z-index: 2;
+    position:relative;
+    bottom: 50px;
+    background:$background-color-primary ;
+    border-radius: 30px 30px 0px 0px;
+    padding: 15px;
+    & .title{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        & .menu__main-title{
+            font-family: $primary-font;
+            font-weight: normal;
+            font-size: $menu-main-title-size;
+            margin: 1rem 0rem 2rem 0rem;
+        }
+    }
+    /* == To center the button at the bottom of the menu == */
+    & .center-box{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+.menu__box{
+    display: flex;
+    flex-flow: column nowrap;
+    //animation d'apparition ?
+    & .menu__title{
+        @include menu-title;
+    }
+    & .menu__bar{
+        width: 40px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    & .plat-container{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        margin: 1rem 0rem 2.5rem 0rem;
+    }
+}
+
+/* 
+      Sub Container code, 
+      HOVER code
+ */
+
+.plat-box{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 30%;
+  color: $default-text-color;
+  background-color: $background-text-color;
+  min-width: 270px;
+  height: 70px;
+  border-radius: 20px;
+  @include box-shadow;
+  white-space: nowrap;
+  overflow: hidden;
+  & .green-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: $tertiary-color;
+    background-repeat:  no-repeat;
+    border-radius: 0px 20px 20px 0px;
+    
+    width: 0px;
+    height: 100%;
+    
+    transition: all 1s;
+    & .fa-check-circle{
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.2rem;
+      
+      transition: all 1s;
+    }
+  }
+  &:hover .green-box,
+  &:active .green-box{
+    width: 90px;
+  }
+  &:hover .fa-check-circle,
+  &:active .fa-check-circle{
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+      All the code about the menu
+ */
+.menu__plat{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 0px 0px;
+  padding:5px 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  & .title__plat{
+    font-family: $secondary-font-bold;
+    font-size: $plat-title;
+    margin: 3px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  & .menu__plat__separator{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    & .menu__text{
+      font-family: $secondary-font;
+      font-size: $plat-text;
+      margin: 2px 0px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    & .plat__price{
+      display: block;
+      font-family: $secondary-font-bold;
+    }
+  }   
+}
+.round-fix{
+  /* with that div, the round stay complete during the animation */
+}
+
+
+/* == *ANIMATION == */
+
+.entree{
+    animation: appear 0.5s ease-in-out both;
+  }
+  .plat{
+    animation: appear 0.5s .6s ease-in-out both;
+  }
+  .dessert{
+    animation: appear 0.5s 1.2s ease-in-out both;
+  }
+
+  /* ==== */
+  .entree .plat-box:nth-of-type(1){
+    animation: appear 1s .2s linear both;
+  }
+  .entree .plat-box:nth-of-type(2){
+    animation: appear 1s .4s linear both;
+  }
+  .entree .plat-box:nth-of-type(3){
+    animation: appear 1s .6s linear both;
+  }
+  .entree .plat-box:nth-of-type(4){
+    animation: appear 1s .7s linear both;
+  }
+  
+  /* ==== */
+  
+  .plat .plat-box:nth-of-type(1){
+    animation: appear 1s .8s linear both;
+  }
+  .plat .plat-box:nth-of-type(2){
+    animation: appear 1s 1s linear both;
+  }
+  .plat .plat-box:nth-of-type(3){
+    animation: appear 1s 1.2s linear both;
+  }
+  .plat .plat-box:nth-of-type(4){
+    animation: appear 1s 1.3s linear both;
+  }
+
+
+   /* ==== */
+  
+   .dessert .plat-box:nth-of-type(1){
+    animation: appear 1s 1.4s linear both;
+  }
+  .dessert .plat-box:nth-of-type(2){
+    animation: appear 1s 1.5s linear both;
+  }
+  .dessert .plat-box:nth-of-type(3){
+    animation: appear 1s 1.7s linear both;
+  }
+  .dessert .plat-box:nth-of-type(4){
+    animation: appear 1s 1.9s linear both;
+  }

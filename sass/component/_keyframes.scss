@@ -1,0 +1,64 @@
+/*===== KEYFRAMES ====== */
+
+@keyframes spinning{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes strafe{
+    from {
+      transform: translateX(0px)
+    }
+    25%{
+      transform: translateX(65px)
+    }
+      75%{
+      transform: translateX(-65px)
+    }
+    to{
+      transform: translateX(0px)
+    }
+}
+  
+@keyframes loader{
+      0% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+      99.99%{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+      100%{
+        opacity: 0;
+        transform: translateX(3000px);
+      }
+}
+
+@keyframes btn{
+  from{
+    background: linear-gradient( 0deg , lighten($primary-color, 5%), lighten($secondary-color, 5%));
+    box-shadow: 1px 3px 5px rgba(1, 1, 1, .4);
+    transition: 0.4s;
+  }
+  to{
+    background: linear-gradient( 0deg , lighten($primary-color, 5%), lighten($secondary-color, 5%));
+      box-shadow: 1px 2px 3px rgba(1, 1, 1, .6);
+      transition: 0.2s;
+  }
+}
+
+@keyframes appear{
+  from{
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

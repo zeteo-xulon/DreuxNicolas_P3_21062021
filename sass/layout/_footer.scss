@@ -7,6 +7,7 @@ footer{
     padding: 1.2rem;
     font-family: $secondary-font;
     font-size: $footer-text-size;
+    padding-bottom: 30px;
     & .logo-mini{
         filter: brightness(100);
         height: 2rem;
@@ -18,12 +19,30 @@ footer{
         gap:0.3rem;
         list-style-type: none;
         padding: 0px;
-        margin: .5rem 0.5rem;
+        margin: .5rem 0rem;
         & li {
+            margin-top: 5px;
             & a {
                 color: $background-text-color;
                 text-decoration: none;
+                font-style: normal;
+                font-size: 1.1rem;
+                & .fa-utensils{
+                   font-size: 1rem;
+                   margin-right: .6rem;
+                }
+                & .fa-hands-helping{
+                    font-size: .8rem;
+                    margin-right: .5rem;
+                    transform: rotate(-10deg);
+                }
             }
         }
     }
+}
+footer li:nth-child(1){
+    font-family: $secondary-font-bold;
+}
+footer li:nth-child(2){
+    font-family: $secondary-font-bold;
 }

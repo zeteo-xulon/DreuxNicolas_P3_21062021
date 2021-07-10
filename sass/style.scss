@@ -1,9 +1,7 @@
 
 
-@import './tools/variables.scss';
+@import './tools/variables';
 @import './tools/mixins';
-//@import './tools/functions';
-//@import './tools/extensions';
 
 *{
     box-sizing: border-box;
@@ -15,12 +13,15 @@ body{
     margin: 0px;
 }
 
+@import './component/keyframes';
 
+@import './layout/loader';
 @import './layout/header';
 @import './layout/reservation';
 @import './layout/fonctionnement';
 @import './layout/restaurant';
+@import './layout/menu';
 @import './layout/footer';
-//@import './layout/container';
+@import './component/buttons';
 
 

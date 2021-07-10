@@ -1,0 +1,56 @@
+
+/* =+ BUTTON += */
+.btn-push{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $secondary-font;
+    text-decoration-line: none;
+    color: $background-text-color;
+    background: linear-gradient( 0deg , $primary-color, $secondary-color);
+    width: 75%;
+    max-width: 220px;
+    height: 50px;
+    border-radius: 37px;
+    box-shadow: 2px 4px 9px rgba(1, 1, 1, .3);
+    &:hover{
+        animation: btn 1s both;
+    }
+    &:active{
+        animation: btn .3s both;
+    }
+}
+/* =+ HEART += */
+
+.heart-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    &:hover .heart2,
+    &:active .heart2{
+        transition: all 1s;
+        transform: scale(1.05, 1.05);
+        transform-origin: bottom;
+    }
+    & .heart1{
+        font-size: 1.5rem;
+        position: absolute;
+        z-index: 3;
+    }
+    & .heart2{
+        font-size: 1.5rem;
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        background: -webkit-linear-gradient(90deg, $secondary-color, $primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        //color: transparent;
+        transform: scale(0,0);
+    }
+  }
